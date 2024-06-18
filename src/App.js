@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import InputText from "./InputText";
+import { useState } from 'react';
 
 function App() {
+  const [count, setCount] = useState(0);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+
+      <div className=" mt-5 flex items-center justify-center" >
+        <InputText
+          setCount={setCount}
+
+        />
+      </div>
+      <div className=" p-3 flex  items-center justify-center">
+        <text className="  textarea textarea-accent">{`${count} ${count <= 1 ? "Word" : "Words"}`}</text>
+      </div>
+
+
+
     </div>
+
   );
 }
 
 export default App;
+
