@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const InputText = ({ setCount }) => {
-    
+
     const [text, setText] = useState("");
 
     const handleSubmit = (e) => {
@@ -24,7 +24,7 @@ const InputText = ({ setCount }) => {
                 Word Counter
             </h1>
 
-            <text className="w-96 h-56  flex textarea textarea-accent">{text}</text>
+            <text className=" w-80 h-56  flex textarea textarea-accent">{text}</text>
 
             <div className=" p-3 flex items-center justify-center">
                 <input
