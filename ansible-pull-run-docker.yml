@@ -1,0 +1,13 @@
+---
+- hosts: prod1
+
+  tasks:
+    - name: pull the image from dokcer
+      command: docker pull preethivi/work
+      args:
+        chdir: /opt/docker
+
+    - name: Run docker container
+      command: docker run -d -p 80:80 preethivi/work
+      args:
+        chdir: /opt/docker
