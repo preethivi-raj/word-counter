@@ -5,9 +5,9 @@
     - name: pull the image from dokcer
       command: docker pull preethivi/work
       args:
-        chdir: /opt/docker
+        chdir: /home/prod
 
     - name: Run docker container
       command: docker run -d -p 80:80 preethivi/work
       args:
-        chdir: /opt/docker
+        chdir: /home/prod
