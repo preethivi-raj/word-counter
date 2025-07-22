@@ -4,12 +4,18 @@
   tasks:
     - name: create docker image
       command: docker build -t work .
+      args:
+        chdir: /opt/docker
     
 
     - name: docker image name change
       command: docker  tag work:latest  preethivi/work:latest
+      args:
+        chdir: /opt/docker
       
 
     - name: push the docker image to docker
       command: docker push preethivi/work
+      args:
+        chdir: /opt/docker
      
