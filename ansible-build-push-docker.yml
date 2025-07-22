@@ -10,6 +10,7 @@
 
     - name: docker image name change
       command: docker  tag word:latest  preethivi/word:latest
+      ignore_errors: yes
       args:
         chdir: /opt/docker
       
