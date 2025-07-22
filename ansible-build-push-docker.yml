@@ -9,7 +9,7 @@
     
 
     - name: docker image name change
-      command: docker  tag work:latest  preethivi/word:latest
+      command: docker  tag word:latest  preethivi/word:latest
       args:
         chdir: /opt/docker
       
