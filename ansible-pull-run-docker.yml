@@ -1,13 +1,13 @@
 ---
-- hosts: prod1
+- hosts: docadmin
 
   tasks:
     - name: pull the image from dokcer
       command: docker pull preethivi/work
       args:
-        chdir: /home/prod
+        chdir: /home/docadmin
 
     - name: Run docker container
       command: docker run -d -p 80:80 preethivi/work
       args:
-        chdir: /home/prod
+        chdir: /home/docadmin
