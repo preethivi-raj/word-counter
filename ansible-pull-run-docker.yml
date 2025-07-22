@@ -3,11 +3,11 @@
 
   tasks:
     - name: pull the image from dokcer
-      command: docker pull preethivi/work
+      command: docker pull preethivi/word
       args:
         chdir: /home/docadmin
 
     - name: Run docker container
-      command: docker run -d -p 80:80 preethivi/work
+      command: docker run -d -p 80:80 preethivi/word
       args:
         chdir: /home/docadmin
