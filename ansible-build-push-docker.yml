@@ -3,7 +3,7 @@
 
   tasks:
     - name: create docker image
-      command: docker build -t word .
+      command: docker build -t word:latest .
       args:
         chdir: /opt/docker
     
